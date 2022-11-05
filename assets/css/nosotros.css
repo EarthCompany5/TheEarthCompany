@@ -1,0 +1,306 @@
+body{
+    margin: auto;
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    z-index: 1;
+    background-color: #5F7A6B;
+    box-shadow: 0px 0px 10px black;
+}
+
+.logo{
+    height: 10vh;
+    text-align: left;
+}
+
+.logo img{
+    height: 10vh;
+    object-fit: fill;
+}
+
+header img{
+    border-radius: 50%;
+}
+
+header div{
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.redes img{
+    place-content: center;
+    width: 10%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+.inicio:hover{
+    font-size: large;
+    background-color: black;
+    text-decoration: underline;
+}
+
+.comu:hover{
+    font-size: large;
+    background-color: black;
+    text-decoration: underline;
+}
+
+.tienda:hover{
+    font-size: large;
+    background-color: black;
+    text-decoration: underline;
+}
+
+.redes:hover{
+    background-color: black;
+}
+
+nav{
+    background-color: #18332D;
+    font-family: 'Maven Pro', sans-serif;
+    margin: auto;
+    font-weight: 900;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+}
+
+section{
+    z-index: 1;
+    background-color: #BCC0BA;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 20% repeat(2,1fr);
+    grid-template-areas: "left center right";
+}
+
+.imgtransition{
+    width: 100%;
+    height: 80vh;
+    overflow-y: hidden;
+    grid-area: center;
+}
+
+.imgtransition img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    animation-name: transicion;
+    animation-duration: 15s;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes transicion {
+    0%{
+        transform: translateY(-400%);
+        animation-duration: 0s;
+    }
+
+    25%{
+        transform: translateY(-300%);
+        animation-duration: 0s;
+    }
+
+    50%{
+        transform: translateY(-200%);
+        animation-duration: 0s;
+        
+    }
+
+    75%{
+        transform: translateY(-100%);
+        animation-duration: 0s; 
+    }
+
+    100%{
+        transform: translateY(0%);
+        animation-duration: 0s;
+        }
+}
+
+aside{
+    font-size: 150%;
+    background-color: #98A7A1;
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    place-content: center;
+    grid-area: left;
+    animation-name: incremento;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes incremento {
+    0%{
+        text-shadow: 0px 0px 7.5px black;
+        font-size: 155%;
+        color: #365544;
+    }
+
+    100%{
+        font-size: 145%;
+        text-shadow: 0px 0px 7.5px #18332D;
+    }
+}
+
+aside button{
+    visibility: hidden;
+    cursor: pointer;
+    background-color: #dddddd;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    position:relative;
+    top: 100%;
+    right: -40%;
+    display: grid;
+    place-content: center;
+ }
+
+ button img{
+    width: 2.5rem;
+    height: 2.5rem;
+ }
+
+aside:hover > button{
+    visibility: visible;
+}
+
+article{
+    grid-area: right;
+    font-weight: 500;
+    width: 100%;
+    height: 80vh;
+    background-color:#98A7A1;
+    overflow: auto;
+    line-height: 2.5rem;
+}
+
+#acerca{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+p{
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+article:hover{
+    background-color: #BCC0BA;
+}
+
+p:hover{
+    color: white;
+    text-shadow: 0px 0px 15px black;
+}
+
+#bien{
+    font-size: 3rem;
+    font-family: 'Maven Pro', sans-serif;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: #88888888;
+    position: fixed;
+    top: 0%;
+    display: grid;
+    place-content: center;
+}
+
+#bien button{
+    cursor: pointer;
+    background-color: #dddddd;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+h2{
+    width: 100%;
+    height: 5vh;
+    grid-area: top;
+    display: grid;
+    place-content: center;  
+    animation-name: bien;
+    animation-duration: 1.5s;
+    animation-iteration-count:  infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes bien {
+    0%{
+        color: #5F7A6B;
+        font-size: 200%;
+        text-shadow: 0px 0px 10px #18332D;
+    }
+    100%{
+        font-size: 100%;
+    }
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #365544;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "left center right";
+    place-content: center;
+}
+
+h4{
+    grid-area: left;
+    font-size: x-small;
+    text-align: left;
+    margin: 1em;
+}
+
+h4 img{
+    width: 1em;
+    height: 1em;
+}
+
+h4::before{
+    content: "Copyright ";
+}
+h4::after{
+    content: " 2022 The Earth Company";
+}
+
+.google{
+    grid-area: right;
+    width: 50%;
+    height: 5vh;
+}

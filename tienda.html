@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Poppins:wght@100&display=swap" rel="stylesheet">
+<title>Tienda</title>
+<link rel="shortcut icon" href="assets/img/logonosotros.png" type="image/x-icon">
+<link rel="stylesheet" href="assets/css/tienda.css">
+<script src="assets/js/tienda.js" defer></script>
+<link rel="shortcut icon" href="assets/img/logotienda.png" type="image/x-icon">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="assets/img/THE_EARTH_COMPANY.png" alt=""></a></div>
+        <div class="inicio"><a href="index.html">INICIO</a></div>
+        <div class="nos"><a href="nosotros.html">NOSOTROS</a></div>
+        <div class="comu"><a href="comunidad.html">COMUNIDAD</a></div>
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100087327977707" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAABExJREFUeF7tm/2RDkEQh/siQAZEgAgQASJABIgAESACRHBEgAgQARkgAuq5erdu673d6e7p7t2ltqvev24/ep75TU93z96J7NYkcLLzaRPYASkK2QHtgGJBZFfQRhV0S0Rui8jVo9/Y3R8iMv59EpHPMT34715KQZdF5IGI3DuA8Xt6fgeg3ovIOxH5FXmQ5d5qQKjk8QGMxR/vNYB6LSJAK7EqQIB5lqAW66AB9KICVDYgltKbQsVowN6KyNPMpZcJiPgCHCCtacSlR4c4FfYjC9BLEXkS9ib3Aa8Oago9NQoItXwUkRshL+pu/ioidyJLLgJo63AG7CFIvYD+FThhSL2Avmx4Wc0tWJR007uaewAR/Ej+lrLfIsLgjo1yxWskla7NxAuIrfzU61XH9dRc5DRkylo5wQbBtdeN77nvSQE8gIg734vznG+HGfaWDlxvVRTArxnAn/H2AEI5KKjKKD6Rv6aYqfd7AHE/73poGYgVELUV+U6VoZxILuUFxDjIj1SlWgEBB0gVRhCmL9SjnMGfHkDcA6SmWQBVq4cq/LnmqPL3HkAmFVkAsZPcDQ6gdTsBk85hxHoBfdDiqgaInetnxHPl3p7YM7VbkZv1xrArreWtAWJXoVKvMk/iRgMOf7LbKfSPADxpGqBe6VqBWuMPMQpAFUZSOrsBaYD+VHg0eiaNLbLgli2RoM5yaAGq3r1Mu8hhditzsKYfLUCVsh4UY0nWlpio2aXeAoT0OcuqtK0Ami09WoCqA/SWlthsoG4BonKnBKi0rSiIRJWE9YK1AFXvYFtSEL5MstgBnWtmFUDNJCxp7WaVQ/8toKw0wA2I/syl4CwvoSA6gxx5R4ye1GSNV73NLwEoI6Ht2uYzEsUlAGXka12JYunMRNbD0b0Zh5hdpUZG8FtCQRn52mzCWt3uqAZEFxEFRa2r3cFLOfK1nlhOOcn9raNeWq7aaQa7y5wPAJrtBhqpNdu+moKqW65bqMVCLVeKVYrWKtsCoOapiqYgwFQe+6wNKHzsA6CM3WxOgWsDUt9vURCDy0jGpiCpDhZOkGmHtQKqUtGagCzvdn3+UhGLLE5WTI4aewa5WxXE9eQjtCajFf54qa0ByPU1iQcQA8v+BG8NQGWf4A0zn1HlD89aGpDnW4AzH70KGgYWLUHWANTzJUk3IOIRW3+kTgPSUgoCDsFeq/supCK9ChqCdhTSEoC64USW2EA6qqRqQCSDbCxu5fRs862Ctffr+0pA7oA8NcDIEjt+HjPFDufJkyoAkedw0kFiG7ZMQENcApL1o89sQGTIwOleUsdEswENz2fHoOmv/XtAFiBiDe9TPwz3SqoK0BgUXck5RUUBoRjiXzqY7CCtTQydSWIUv7GqegChFuILv+j31Zrf3Ymi+uDGBaQGNNtZhsQrbZDAJa6gEjL4tPhiGUT1ErP4sOlrdkDK9OyAdkCxFbwraFdQTEF/AaEf9EkXSo9XAAAAAElFTkSuQmCC"/></a>
+            <a href="https://www.instagram.com/the_earth_company01?r=nametag" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAABWBJREFUeF7tmzuoXUUUhv9oLWqjIIIPsE5SqY1vwUZ8EbAzVoogaq2gFtr6QCGmiVqoaECtQ9AQEK1UUBAbXyg2vrAW5YMZ2HecfdaaWXNyzrnsgUNu7lnzWN/+Z82a2XMPaCkrCRxY+KwmsAAyFLIAWgDFgsiioEVBi4JiBBYFxfitIwYdknSXpIsk8TPlyvSJjXZv7e8l8aF8IelPSR+mn4f1MwrQTZIekHR3AjNsgB0NAeoDSW9I+rij/p4qUUAo5AVJANrGAqAnIqqKADqa4DCVtrmgKCC93jPIXkDPSHq6p8MN1nlWEuNuKj2AUM6Jpl62x/jBViW1AiLmfLQFgbgXOdPt5paY1AoIONsakL3QCNxAcpUWQIAB0H4oAHKlAC2AyC1IAFeVHyZznNWNeHXhFhIloSRnM0sLoD+M2AMcYhTzPBcyaLLcbYPEGC826UjyAvJMr7ll9PGUL3nGcy5tXNPMC8iT99yTUvzSSQ/ccwkm9+XKi7yAPPFnrkPm+vszBJiWBEs+eeM5nZ7Apf46pqgrDnkB4cCNxmMm1hyu2NRSgzMpq3WtJAnSi5KuGCg1xmCmLF5An0+OLlaNEYdxJAdq4s90tfgr/d8LpuyL9pjuIxQ190D39OkF9O+AJ/dlWvYZWKSwUgJ4BCTTf9MgeRIFBBzkPE0BIpDIsYhZUUim/6bBAEBMK556GYRp+nJJt6b4dq2kSyX9I+kXSZ+mzP20pN8qNGmTqR8ppv+mwQBAc/nGnZIekXSH4eF7kl6VRFCtxSQO7HqL6b9pEAQ0t1I8LOnJpCCPc19Lel7SWxVjlNm7upn+mwZBQCz7ZVAmoXxF0mUeMhObr5Lizhb1IudTpv+mQQAQgTm/1cg+XS3pNUm3NcLJ5u9IQn3EtWkh+PcEbNN/0yAA6CVJ5C3T8pCkY51wcrV7K5m5J9OvdWv6bxoEANWC89uS7g8CelnSY0Ubnr3iTgD6qSEwz3Fk+b+++LJ3Q2wKxDQIKIjzlmliSI7zs6Tzgwpig8s507TsG0AkgOcFAf1YWdZ3ElAtBqGg1uW95PmZpOuKX646Uln1PMwZZBoEplgN0LuSjgQVRA716H4I0rVlnq0F24ZIAfDJooGdXObZAlxVOHKNpOOeg6oZgoAhl/q9+L73tMGcQaZBYIpRtTbNUADT5JJGGX2Tthrlu7md3Wrg/9xbTGLIUw2QvpX0nKQ3K1C/C1zOMgViGgQVNKcifn9fUsQthpI4XCdunarYRV8pmf6bBgMAkSyyq68dmBGjbpd0Q8qOpwdmnyQFAubXCpwRFylM/02DAYBogiMP4pF15HpB6u9vQ1UcuTK1ope3TP9Ng0GAMiTOgmpKaonXKIf3bOV2o6WNbGv6bxqkllDAwZ4RFHVQEJeYyFt6Crt4du5R5dB37bzqf2PyAvK8OGxxmPZ4E+t9P8atEt63jVBNHufQF4e9maoFjekGJNpHXZwU5pNBYORXzyMUU46llul3K6j3QMoCtMnvufmKKlcW7xTrPU6w+t/k97UXCt0KomLvwfgmIcz1XTt0q9p6FUTldcWhTQB0xR8G1gJoP00zMnhXPtYCCKCjl/tNqIc/cuEEwFVaAY28euIa4GCjVRcpwjEoNxA5fxnsb3Nzroub01ZbFZTr7mJe1Px3Gq1BunxcKIlEq+edePOjD1QIXfvrVVAeLzEJSNYFz4B/oaoEZNTuWrFqPUUB5TZJAVDUuq7stlDKV4tDYHKHowBNHUBV+W9X8/UXNpsjjkum/QAiK4P0g0yff6OXRPc8jHUAannaW2+7ADIe0QJoARSbxYuCFgUtCooRWBQU47fEIIPff9ta9Enlr+PtAAAAAElFTkSuQmCC"/></a>
+           <a href="https://www.tiktok.com/@the_earth_company01?_t=8X5V9OgfrL4&_r=1" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAA9BJREFUeF7tm4GxTTEQhvdVgApQASpABagAFdABKkAFqAAVoAJUgApQAfPNnMycuc49+Xez53knL5m5897M3WQ3XzabZJN7YqOsEjgZfNYJDEAVDxmABqC2IDI8aKce9Ecc92dm9lSUDYmdVQ8agCrDqQL6ZGa3Qq4hVtq7B9HNTfuwaePiIC2JqR5E3dtm9rFB1y530h5AL83s8QB0nMAvM7thZt+3gNTDFIMLU4ypll56AQSYh2b2OptQT4CYanjRl0xIPQGCC5DuZa5qvQEqzpM23XoFBKh3ZsZZrWnK9QyoeBOACN5vpinoClHnAdAcCLCIU2UHXoV13gDNgUh9l4SqmPMFPEeNqHap75JQ1IKGegNQBd4ANAA1zC8zUz2IVAflUUCdFF4koYDy1ioqoJK0v25mL8zspkOx1HdJyKH0UBTDL5sZf8vnyiTEnoQ8zlLxAiptkJ9+YGb3BZulvktCgrK5yMXJ5cny8f9aOaY/CqjoYhDuTgl9oF1YMELquyQkAvKAKU1uBWjJk7EPLy6DJt2nZQHCrZ8LHnNo+GkBEsf4X7EMQMB5FbSge0Asr6we0dI1ILwG72kp3QIiwD1pITPV7RIQq8C3QEBe4tklILJzykZMcbDuALHp+qD0/ECGVxhc7pHNYwfNRo49ybEr49aNYsDE5SreZR44nucmgAGCN3G+S0CM+GfH0JAkj65yuwSEJ7BbVsr76SykyC7J7BIQ90x3hB7/nuJLy2uLXQL6KS7tGQ8rdwfIE3+uJrzV2R0gdXn/Ok0vYSauinQLKOvV6QBUcbFuAa3lmdVpx1mPBUEpvAVidd2sqDtpj9GXIq8oZj1U4x1VNn0CjAIVELKn5fYk4NR7Lo/9IS/zKGD6XBO0tDzL9aRS2JDWbk0Ec9dFPIA8uefos1xPlrL1OCPB8wDyxCGUkzfiraBaPHBOJf54YxDy6nmsQGFastKsnctIvpHCLTeuCtCsDWlVl8eDaMwzzebKAcungMIbWa24/fSAKW2mvWKtEfICoj01WNd0R7//EYQa0hcBxIgDaem+O2SEs9Lmm8O5PRFA1GdqvHV2LEM8I5XisiMKCCWeDZ3LqCPCLSncsP4WQARaAq/n0VLU0P8CJ7LML3Uw855sqf2sFEpocFo8aK6QhD57mczAzWpFm+m/AfOQygKETlY34pKS2K/ZSDCmrfKzgZr8Zt9nAipGAoqRZ6XzeBSHT2IadVtuRFJhbQFobiC75fIBHA86KcAot638BcxmP+1uIbY1oBbbzkTdAagyDAPQANQ2U4cHDQ9q86C/wcG6SXCuC3gAAAAASUVORK5CYII="/></a>
+        </div>
+    </header>
+
+    <nav >
+        <div class="transici">
+            <img src="./assets/img/B1.jpg" alt="">
+            <img src="./assets/img/B2.jpg" alt="">
+            <img src="./assets/img/B3.jpg" alt="">
+            <img src="./assets/img/B4.jpg" alt="">
+            <img src="./assets/img/B5.jpg" alt="">
+            <img src="./assets/img/B6.jpg" alt="">
+            <img src="./assets/img/C1.jpg" alt="">
+            <img src="./assets/img/F1.jpg" alt="">
+            <img src="./assets/img/proximamente.png" alt="">
+        </div>
+    </nav>
+
+    <section class="tienda">
+        <h2>PRODUCTOS</h2>
+    </section>
+
+    <section id="produc">
+
+    <div id="rosa">
+    <img src="./assets/img/B1.jpg" alt="" >
+    <h3>Rosa verde</h3>
+    <p>Un agradable obsequio.</p>
+    <p>Precio:10bs</p>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVRJREFUSEu9lW1RAzEURU+VAAqgCkACKAAHUCWAAkAB4AAUAA6KEpgzk9dJ0t2klG3fTH7sJrn3fd7M2LHNdozPJgRXwClwkpY+fab1Ary2nGwRnAO3wGEnyiWwACRbszGCO+A6nf4G/H5LXvvbaM6AG+AgnfOMRIUNEeTgXvC7ZZIYqXafSFfnawLT8px255nHvV4woo906CJPV01gPg15zPOfBDIUeUQixlF4lB+0Wx4Acz5W2BaBmOHgKoqc4BG4bHgvQI8gongCdLiYA3v7GGjlvkcQtRBLnIJg6HL86xU5z0SBM7qRECclmDJFXyErey1yDFnRx1Xye0Vutmnex/8ZtGKO9i4VRpGLnYOjgE0mdgGUk5hXv98rufYR0oGQlTUlrQet9tKiCxx6PxaFOZfoTw9ODiaRSxlQSjT73LkRdBB4SE17crDV/iaP/lbAcekXtcVYGaT13/YAAAAASUVORK5CYII="/></button>
+    </div>
+
+     <div id="ama">
+    <img src="./assets/img/B2.jpg" alt="" >
+    <h3>Amaryllis</h3>
+    <p>Te ofrecemos esta plantita</p>
+    <p>Precio:6bs</p>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVRJREFUSEu9lW1RAzEURU+VAAqgCkACKAAHUCWAAkAB4AAUAA6KEpgzk9dJ0t2klG3fTH7sJrn3fd7M2LHNdozPJgRXwClwkpY+fab1Ary2nGwRnAO3wGEnyiWwACRbszGCO+A6nf4G/H5LXvvbaM6AG+AgnfOMRIUNEeTgXvC7ZZIYqXafSFfnawLT8px255nHvV4woo906CJPV01gPg15zPOfBDIUeUQixlF4lB+0Wx4Acz5W2BaBmOHgKoqc4BG4bHgvQI8gongCdLiYA3v7GGjlvkcQtRBLnIJg6HL86xU5z0SBM7qRECclmDJFXyErey1yDFnRx1Xye0Vutmnex/8ZtGKO9i4VRpGLnYOjgE0mdgGUk5hXv98rufYR0oGQlTUlrQet9tKiCxx6PxaFOZfoTw9ODiaRSxlQSjT73LkRdBB4SE17crDV/iaP/lbAcekXtcVYGaT13/YAAAAASUVORK5CYII="/></button>
+    </div>
+
+    <div id="zebra">
+    <img src="./assets/img/B3.jpg" alt="">
+    <h3>Zebra Haworthie</h3>
+    <p>De las más bonitas plantitas para tu oficina</p>
+    <p>Precio:7bs</p>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVRJREFUSEu9lW1RAzEURU+VAAqgCkACKAAHUCWAAkAB4AAUAA6KEpgzk9dJ0t2klG3fTH7sJrn3fd7M2LHNdozPJgRXwClwkpY+fab1Ary2nGwRnAO3wGEnyiWwACRbszGCO+A6nf4G/H5LXvvbaM6AG+AgnfOMRIUNEeTgXvC7ZZIYqXafSFfnawLT8px255nHvV4woo906CJPV01gPg15zPOfBDIUeUQixlF4lB+0Wx4Acz5W2BaBmOHgKoqc4BG4bHgvQI8gongCdLiYA3v7GGjlvkcQtRBLnIJg6HL86xU5z0SBM7qRECclmDJFXyErey1yDFnRx1Xye0Vutmnex/8ZtGKO9i4VRpGLnYOjgE0mdgGUk5hXv98rufYR0oGQlTUlrQet9tKiCxx6PxaFOZfoTw9ODiaRSxlQSjT73LkRdBB4SE17crDV/iaP/lbAcekXtcVYGaT13/YAAAAASUVORK5CYII="/></button>
+     </div>
+
+     <div id="eco">
+    <img src="./assets/img/B4.jpg" alt="" >
+    <h3>Ecolapiceros</h3>
+    <p>LLevate lapiceros para tu oficina, con punta fina.</p>
+    <p>Colores: Azul,Rojo y Negro.</p>
+    <p>A tan solo:1u/2bs</p>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVRJREFUSEu9lW1RAzEURU+VAAqgCkACKAAHUCWAAkAB4AAUAA6KEpgzk9dJ0t2klG3fTH7sJrn3fd7M2LHNdozPJgRXwClwkpY+fab1Ary2nGwRnAO3wGEnyiWwACRbszGCO+A6nf4G/H5LXvvbaM6AG+AgnfOMRIUNEeTgXvC7ZZIYqXafSFfnawLT8px255nHvV4woo906CJPV01gPg15zPOfBDIUeUQixlF4lB+0Wx4Acz5W2BaBmOHgKoqc4BG4bHgvQI8gongCdLiYA3v7GGjlvkcQtRBLnIJg6HL86xU5z0SBM7qRECclmDJFXyErey1yDFnRx1Xye0Vutmnex/8ZtGKO9i4VRpGLnYOjgE0mdgGUk5hXv98rufYR0oGQlTUlrQet9tKiCxx6PxaFOZfoTw9ODiaRSxlQSjT73LkRdBB4SE17crDV/iaP/lbAcekXtcVYGaT13/YAAAAASUVORK5CYII="/></button>
+    </div>
+
+    <div id="toma">
+    <img src="./assets/img/B6.jpg" alt="">
+    <h3>Tomatodo</h3>
+    <p>LLevatelo y no tengas excusas para hidratarte este verano.</p>
+    <p>Colores: Verde, Azul y Morado.</p>
+    <p>Precio:25bs</p>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVRJREFUSEu9lW1RAzEURU+VAAqgCkACKAAHUCWAAkAB4AAUAA6KEpgzk9dJ0t2klG3fTH7sJrn3fd7M2LHNdozPJgRXwClwkpY+fab1Ary2nGwRnAO3wGEnyiWwACRbszGCO+A6nf4G/H5LXvvbaM6AG+AgnfOMRIUNEeTgXvC7ZZIYqXafSFfnawLT8px255nHvV4woo906CJPV01gPg15zPOfBDIUeUQixlF4lB+0Wx4Acz5W2BaBmOHgKoqc4BG4bHgvQI8gongCdLiYA3v7GGjlvkcQtRBLnIJg6HL86xU5z0SBM7qRECclmDJFXyErey1yDFnRx1Xye0Vutmnex/8ZtGKO9i4VRpGLnYOjgE0mdgGUk5hXv98rufYR0oGQlTUlrQet9tKiCxx6PxaFOZfoTw9ODiaRSxlQSjT73LkRdBB4SE17crDV/iaP/lbAcekXtcVYGaT13/YAAAAASUVORK5CYII="/></button>
+    </div>
+
+    <div id="peque">
+    <img src="./assets/img/C1.jpg" alt="">
+    <h3>Tarro Pequeño</h3>
+    <p>Guarda tus objetos mas preciados</p>
+    <p>Precio:5bs</p>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVRJREFUSEu9lW1RAzEURU+VAAqgCkACKAAHUCWAAkAB4AAUAA6KEpgzk9dJ0t2klG3fTH7sJrn3fd7M2LHNdozPJgRXwClwkpY+fab1Ary2nGwRnAO3wGEnyiWwACRbszGCO+A6nf4G/H5LXvvbaM6AG+AgnfOMRIUNEeTgXvC7ZZIYqXafSFfnawLT8px255nHvV4woo906CJPV01gPg15zPOfBDIUeUQixlF4lB+0Wx4Acz5W2BaBmOHgKoqc4BG4bHgvQI8gongCdLiYA3v7GGjlvkcQtRBLnIJg6HL86xU5z0SBM7qRECclmDJFXyErey1yDFnRx1Xye0Vutmnex/8ZtGKO9i4VRpGLnYOjgE0mdgGUk5hXv98rufYR0oGQlTUlrQet9tKiCxx6PxaFOZfoTw9ODiaRSxlQSjT73LkRdBB4SE17crDV/iaP/lbAcekXtcVYGaT13/YAAAAASUVORK5CYII="/></button>
+     </div>
+    <div id="grande">
+    <img src="./assets/img/F1.jpg" alt="" >
+    <h3>Tarro Grande</h3>
+    <p>Multiusos</p>
+    <p>Precio:10bs</p>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVRJREFUSEu9lW1RAzEURU+VAAqgCkACKAAHUCWAAkAB4AAUAA6KEpgzk9dJ0t2klG3fTH7sJrn3fd7M2LHNdozPJgRXwClwkpY+fab1Ary2nGwRnAO3wGEnyiWwACRbszGCO+A6nf4G/H5LXvvbaM6AG+AgnfOMRIUNEeTgXvC7ZZIYqXafSFfnawLT8px255nHvV4woo906CJPV01gPg15zPOfBDIUeUQixlF4lB+0Wx4Acz5W2BaBmOHgKoqc4BG4bHgvQI8gongCdLiYA3v7GGjlvkcQtRBLnIJg6HL86xU5z0SBM7qRECclmDJFXyErey1yDFnRx1Xye0Vutmnex/8ZtGKO9i4VRpGLnYOjgE0mdgGUk5hXv98rufYR0oGQlTUlrQet9tKiCxx6PxaFOZfoTw9ODiaRSxlQSjT73LkRdBB4SE17crDV/iaP/lbAcekXtcVYGaT13/YAAAAASUVORK5CYII="/></button>
+</div>
+  </section>
+
+  <aside>
+    <div id="rei"><button>REINICIAR</button></div>
+    <div id="com"><button>COMPRAR</button></div>
+    <h4 id="total"></h4>
+</aside>
+
+<div id="menu">
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMNJREFUSEvtlN0NgkAQhD86sBMsQTuQSrUDLUE7sQQziSQn7h8mF1/gDbLMtzs7dwOdn6GzPhsgdfjvFp2AG/B0Wt0BB+DijRJNIPEzcAeOBkTiV2APTB4kAkhA3Y8GpBV/vKcwp8x2YEHkxtx5KK7CDKCaJUTfZEsqXgUsIXovia8FzLboP2/xX2GqWtR6LhFr8WZSM4CVFgl56Vo1QRTFKMIfkMpB8xbaQn46aOqk61WR3pSVgmzJFY2wZgOkFna36AUMCDQZmJpqFgAAAABJRU5ErkJggg=="/></button>
+       <div>
+        <h6>Nombre</h6>
+        <input type="text" name="" id="">
+       </div>
+       <div>
+        <h6>Dirección de Entrega</h6>
+        <input type="text" name="" id="">
+       </div>
+       <div>
+        <h6>Número de Celular</h6>
+        <input type="text" name="" id="">
+       </div>
+       <div>
+        <h6>Productos</h6>
+        <div id="productos"></div>
+       </div>
+       <div>
+        <h6>Métodos de pago</h6>
+        <input type="text" name="" id=""><br>
+        <img src="assets/img/pago.jpg" alt="" width="50%">
+       </div>
+</div>
+
+  <section id="logo">
+    <img src="./assets/img/THE_EARTH_COMPANY.png">
+    <p>CUIDAR Y PRESERVAR ES NUESTRA PRIORIDAD</p>
+</section>
+<footer class="google">
+    <div id="google_translate_element"></div>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</footer>
+</body>
+</html>

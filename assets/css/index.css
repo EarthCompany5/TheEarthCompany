@@ -1,0 +1,296 @@
+    body{
+        margin: auto;
+    }
+
+    header{
+        width: 100%;
+        height: 10vh;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        z-index: 1;
+        position: sticky;
+        top: 0;
+        background-color: #5F7A6B;
+        box-shadow: 0px 0px 10px black;
+    }
+
+    .logo{
+        height: 10vh;
+        text-align: left;
+    }
+
+    .logo img{
+        height: 10vh;
+        object-fit: fill;
+    }
+
+    header img{
+        border-radius: 50%;
+    }
+
+    header div{
+        line-height: 50px;
+        text-align: center;
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    .redes img{
+        place-content: center;
+        width: 10%;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 900;
+    }
+
+    .nos:hover{
+        font-size: large;
+        background-color: black;
+        text-decoration: underline;
+    }
+
+    .comu:hover{
+        font-size: large;
+        background-color: black;
+        text-decoration: underline;
+    }
+
+    .tienda:hover{
+        font-size: large;
+        background-color: black;
+        text-decoration: underline;
+    }
+
+    .redes:hover{
+        background-color: black;
+    }
+
+    nav{
+        display: flex;
+        width: 100%;
+        height: 85vh;
+        overflow-x: hidden;
+    }
+    
+    nav img {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 85vh;
+        object-fit: cover;
+        animation-name: transicion;
+        animation-duration: 15s;
+        animation-delay: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes transicion {
+        0%{
+            transform: translateX(-200%);
+            animation-duration: 0s;
+        }
+
+        50%{
+            transform: translateX(-100%);
+            animation-duration: 0s;
+            
+        }
+
+        100%{
+            transform: translateX(0%);
+            animation-duration: 0s;
+            }
+    }
+
+    section{
+        text-align: center;
+        line-height: 1.5;
+        font-family: 'Poppins', sans-serif;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .mision{
+        text-align: center;
+        background-color: #98A7A1;
+        display: grid;
+        width: 100%;
+        height: 85vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right";
+    }
+
+    #mis1{
+        display: grid;
+        place-content: center;
+        width: 100%;
+        height: 85vh;
+        cursor: help;
+        grid-area: right; 
+    }
+
+    #mis1:hover{
+        color: white;
+        background-color: #18332D;
+        transition: 2.5s;
+    }
+
+    h3{
+        font-weight: 900;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    #mis1 ul{
+        list-style-type: circle;
+    }
+
+    .cuadrodif img{
+        grid-area: left;
+        display: flex;
+        flex: 0 0 100%;
+        width: 100%;
+        height: 85vh;
+        object-fit: cover;
+        overflow: hidden;
+        animation-name: transicionreverse;
+    animation-duration: 15s;
+        animation-delay: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes transicionreverse {
+        0%{
+            transform: translateX(0%);
+            animation-duration: 0s;
+        }
+
+        50%{
+            transform: translateX(-100%);
+            animation-duration: 0s;
+            
+        }
+
+        100%{
+            transform: translateX(-200%);
+            animation-duration: 0s;
+            }
+    }
+
+
+    .vision{
+        text-align: center;
+        background-color: #AAB5AF;
+        display: grid;
+        width: 100%;
+        height: 85vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right";
+    }
+
+    #vis1{
+        display: grid;
+        place-content: center;
+        width: 100%;
+        height: 85vh;
+        cursor: help;
+        grid-area: left; 
+    }
+
+    #vis1:hover{
+        color: white;
+        background-color: #365544;
+        transition: 2.5s;
+    }
+
+    #vis1 ul{
+        list-style-type: disc;
+    }
+
+    ul{
+        font-size: 100%;
+        font-weight: 600;
+        overflow: auto;
+    }
+
+    .vision img{
+        height: 85vh;
+        grid-area: right;
+    }
+
+    section img{
+        width: 100%;
+        height: 100vh;
+    }
+
+    aside{
+        border-radius: 2.5%;
+        box-shadow: 0px 0px 10px 10px black;
+        background-image: url(../img/v2.jpg);
+        background-repeat: round;
+        font-size: x-large;
+        text-align: center;
+        text-shadow: 1.25px 3px 1px rgb(100, 100, 100);
+        width: 60%;
+        height: 70vh;
+        z-index: 3;
+        position: fixed;
+        left: 20%;
+        top: 20%;
+        display: grid;
+        place-content: center;
+ }
+
+ button{
+    cursor: pointer;
+    background-color: #dddddd;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    position:absolute;
+    right: -2%;
+    bottom: 97%;
+    display: grid;
+    place-content: center;
+ }
+
+ footer{
+    width: 100%;
+    height: auto;
+    background-color: #365544;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "left center right";
+    place-content: center;
+}
+
+h4{
+    grid-area: left;
+    font-size: x-small;
+    text-align: left;
+    margin: 1em;
+}
+
+h4 img{
+    width: 1em;
+    height: 1em;
+}
+
+h4::before{
+    content: "Copyright ";
+}
+h4::after{
+    content: " 2022 The Earth Company";
+}
+
+.google{
+    grid-area: right;
+    width: 50%;
+    height: 5vh;
+}
